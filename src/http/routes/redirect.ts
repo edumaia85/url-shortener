@@ -1,7 +1,7 @@
 import type { FastifyPluginCallbackZod } from 'fastify-type-provider-zod'
 import { z } from 'zod/v4'
 
-import { prisma } from '../../libs/prisma.ts'
+import { prisma } from '../../libs/prisma'
 
 export const redirectRoute: FastifyPluginCallbackZod = (app) => {
   app.get(

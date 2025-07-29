@@ -7,10 +7,10 @@ import {
   type ZodTypeProvider,
 } from 'fastify-type-provider-zod'
 
-import { shortenUrlRoute } from './http/routes/shorten-url.ts'
-import { getLinksRoute } from './http/routes/get-links.ts'
-import { redirectRoute } from './http/routes/redirect.ts'
-import { env } from './env.ts'
+import { shortenUrlRoute } from './http/routes/shorten-url'
+import { getLinksRoute } from './http/routes/get-links'
+import { redirectRoute } from './http/routes/redirect'
+import { env } from './env'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 

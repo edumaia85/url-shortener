@@ -1,9 +1,8 @@
 import type { FastifyPluginCallbackZod } from 'fastify-type-provider-zod'
 import z from 'zod/v4'
 
-import { prisma } from '../../libs/prisma.ts'
+import { prisma } from '../../libs/prisma'
 import { nanoid } from 'nanoid'
-import { env } from '../../env.ts'
 
 export const shortenUrlRoute: FastifyPluginCallbackZod = (app) => {
   app.post('/url/shorten', {
