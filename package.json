@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsx watch src/server.ts",
-    "build": "tsup src/server.ts --out-dir build --format esm",
+    "build": "tsup src/server.ts --out-dir build --format esm --bundle false",
     "start": "node build/server.js",
     "db:migrate": "npx prisma migrate dev",
     "db:studio": "npx prisma studio"
