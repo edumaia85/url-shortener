@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsx watch src/server.ts",
-    "build": "tsup src/server.ts --out-dir build",
+    "build": "tsup",
     "start": "node build/server.mjs",
     "db:migrate": "npx prisma migrate dev",
     "db:studio": "npx prisma studio"

@@ -3,10 +3,11 @@ import { defineConfig } from 'tsup'
 export default defineConfig({
   entry: ['src/server.ts'],
   outDir: 'build',
-  format: ['esm'],
+  format: ['cjs'],
   bundle: false,
   splitting: false,
-  target: 'es2022',
+  clean: true,
   sourcemap: true,
-  clean: true
+  target: 'es2022',
+  dts: false 
 })
