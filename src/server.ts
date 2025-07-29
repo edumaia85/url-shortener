@@ -30,4 +30,4 @@ app.register(shortenUrlRoute)
 app.register(redirectRoute)
 app.register(getLinksRoute)
 
-app.listen({ port: env.PORT })
+app.listen({ port: env.PORT, host: '0.0.0.0' })
