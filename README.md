@@ -73,9 +73,6 @@ Siga os passos abaixo para rodar o projeto na sua máquina.
 
     # Porta em que a aplicação irá rodar
     PORT=3333
-
-    # Ambiente de desenvolvimento
-    NODE_ENV="development"
     ```
 
 4.  **Execute as migrações do banco de dados:**
