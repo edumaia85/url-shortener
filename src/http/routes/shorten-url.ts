@@ -3,6 +3,7 @@ import z from 'zod/v4'
 
 import { prisma } from '../../libs/prisma'
 import { nanoid } from 'nanoid'
+import { env } from '../../env'
 
 export const shortenUrlRoute: FastifyPluginCallbackZod = (app) => {
   app.post('/url/shorten', {
@@ -27,7 +28,7 @@ export const shortenUrlRoute: FastifyPluginCallbackZod = (app) => {
     })
 
     if (existingLink) {
-      const shortLink = `${request.protocol}://${host}/url/${existingLink.code}`
+      const shortLink = `${env.API_BASE_URL}/url/${existingLink.code}`
 
       return reply.status(200).send({ shortLink })
     }
@@ -53,7 +54,7 @@ export const shortenUrlRoute: FastifyPluginCallbackZod = (app) => {
       },
     })
 
-    const shortLink = `${request.protocol}://${host}/url/${link.code}`
+    const shortLink = `${env.API_BASE_URL}/url/${link.code}`
 
     return reply.status(201).send({ shortLink })
   })
